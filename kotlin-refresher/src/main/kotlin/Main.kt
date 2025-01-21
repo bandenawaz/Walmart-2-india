@@ -24,6 +24,17 @@ fun main(args: Array<String>) {
     println("Factorial of $n is $result")
 
 
+    val sum = performOperation(5,8) { a, b -> a + b }
+    val product = performOperation(5, 8) { a, b -> a * b }
+    println("Sum $sum")
+    println("Product $product");
+
+}
+
+//higher order functions
+fun performOperation(x: Int, y: Int, operation: (Int, Int) -> Int): Int {
+
+    return  operation(x,y)
 
 }
 
